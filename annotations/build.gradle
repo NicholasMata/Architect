@@ -1,9 +1,21 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
     id 'org.jetbrains.kotlin.jvm'
 }
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_7
     targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            version = "1.0.0-alpha"
+            groupId = 'net.matadesigns.architect'
+            artifactId = 'annotations'
+            from components.java
+        }
+    }
 }
