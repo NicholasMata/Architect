@@ -1,0 +1,23 @@
+pluginManagement {
+    plugins {
+        id("com.google.devtools.ksp") version "1.6.21-1.0.5"
+    }
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Architect"
+include ':app'
+include ':compiler'
+include ':core'
+
+include ':annotations'
